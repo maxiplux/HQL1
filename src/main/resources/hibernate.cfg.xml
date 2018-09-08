@@ -24,6 +24,8 @@
         <!-- Needed since Hibernate 5 to generate identity columns properly -->
         <property name="hibernate.id.new_generator_mappings">false</property>
 
+        <property name="hibernate.connection.autocommit">true</property>
+
 
         <!-- Disable second-level cache provider -->
         <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
