@@ -130,7 +130,7 @@ public class App {
         session.getTransaction().commit();
 
         // Close the SessionFactory (best practice)
-        tearDown();
+        //tearDown();
     }
 
     public static void fillDataBase() {

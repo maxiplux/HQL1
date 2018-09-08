@@ -5,24 +5,24 @@
 <hibernate-configuration>
     <session-factory>
         <!-- HSQL DB running on localhost -->
-        <property name="connection.url">jdbc:mysql://localhost/cs544</property>
+        <property name="connection.url">jdbc:mysql://localhost/midterm</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.username">root</property>
         <property name="connection.password"></property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
         <!-- Use the Hibernate built-in pool for tests. -->
-        <property name="connection.pool_size">1</property>
+        <property name="connection.pool_size">2</property>
 
         <!-- Show all SQL DML executed by Hibernate -->
-        <property name="show_sql">false</property>
+        <property name="show_sql">true</property>
         <property name="use_sql_comments">true</property>
         <property name="hibernate.format_sql">true</property>
         
         <!-- Always drop and recreate the database schema on startup -->
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         <!-- Needed since Hibernate 5 to generate identity columns properly -->
-        <property name="hibernate.id.new_generator_mappings">false</property>
+        <property name="hibernate.id.new_generator_mappings">true</property>
 
         <property name="hibernate.connection.autocommit">true</property>
 
@@ -31,9 +31,16 @@
         <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
 
         <!-- Mapping files -->
-        <mapping class="cs544.hql1.model.Airline"/>
-        <mapping class="cs544.hql1.model.Airplane"/>
-        <mapping class="cs544.hql1.model.Airport"/>
-        <mapping class="cs544.hql1.model.Flight"/>
+
+        <mapping class="cs544.hql1.midterm.Tree"/>
+        <mapping class="cs544.hql1.midterm.CreditCard"/>
+        <mapping class="cs544.hql1.midterm.Customer"/>
+
+        <mapping class="cs544.hql1.midterm.Deciduous"/>
+        <mapping class="cs544.hql1.midterm.Evergreen"/>
+        <mapping class="cs544.hql1.midterm.Treatment"/>
+
+
+
     </session-factory>
 </hibernate-configuration>
